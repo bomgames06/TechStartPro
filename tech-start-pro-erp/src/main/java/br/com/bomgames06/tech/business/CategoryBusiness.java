@@ -14,6 +14,14 @@ public class CategoryBusiness {
         this.categoryDao = new CategoryDao(entityManager);
     }
 
+    public void save (Category object) {
+        this.categoryDao.save(object);
+    }
+
+    public void delete (Category object) {
+        this.categoryDao.delete(object);
+    }
+
     public List<Category> listCategory() {
         return this.categoryDao.listCategory();
     }

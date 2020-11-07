@@ -4,6 +4,7 @@ import br.com.bomgames06.tech.entity.generic.GenericEntity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_product", schema = "public")
@@ -22,6 +23,10 @@ public class Product implements GenericEntity, Serializable {
 
     @Column(name = "value", nullable = false)
     private Double value;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name="tb_category_product", joinColumns={@JoinColumn(name="id_product")}, inverseJoinColumns={@JoinColumn(name="id_category")})
+    private List<Category> categories;
 
     @Override
     public Long getCode() {
@@ -58,5 +63,13 @@ public class Product implements GenericEntity, Serializable {
 
     public void setValue(Double value) {
         this.value = value;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 }

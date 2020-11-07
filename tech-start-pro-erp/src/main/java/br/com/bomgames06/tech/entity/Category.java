@@ -3,12 +3,10 @@ package br.com.bomgames06.tech.entity;
 import br.com.bomgames06.tech.entity.generic.GenericEntity;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "tb_category", schema = "public")
-@XmlRootElement
 public class Category implements GenericEntity, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Category")
