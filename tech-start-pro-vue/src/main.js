@@ -31,7 +31,7 @@ Vue.use(VueSweetalert2);
 Vue.config.productionTip = false
 
 Vue.prototype.$api = {
-    base: 'http://localhost:8080/tech-start-pro-erp-1.0-SNAPSHOT/rest/api'
+    base: 'http://localhost:8080/tech-start-pro/rest/api'
 }
 Vue.prototype.$util = util;
 Vue.prototype.$toastr = Toastr;

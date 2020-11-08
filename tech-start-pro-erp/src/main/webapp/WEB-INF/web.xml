@@ -7,4 +7,7 @@
         <servlet-name>javax.ws.rs.core.Application</servlet-name>
         <url-pattern>/rest/api/*</url-pattern>
     </servlet-mapping>
+    <listener>
+        <listener-class>br.com.bomgames06.tech.listener.StartListener</listener-class>
+    </listener>
 </web-app>
