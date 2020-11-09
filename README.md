@@ -20,7 +20,98 @@ Sendo a aplicação consistuida de:
   - SweetAlert2: Biblioteca para criar caixa de dialogo.
 - Banco de dados:
   - Postgresql
-  
+
+# Instalação
+
+## Requisitos
+
+- Java JDK 8
+- Wildfly (21.0.0.Final)
+- Maven (3.6.3)
+- Postgresql (12.4)
+- Node (12.10.0)
+- Yarn (1.22.5)
+
+## Instalação
+
+### Configurando base
+
+Criar base chamada `tech_start_pro`.
+Criar usuário `tech` com a senha `m789`.
+Conceder permissão da base para o usuário criado.
+
+```sql
+create database tech_start_pro;
+create user tech encrypted password 't789';
+grant all privileges on database tech_start_pro to tech;
+```
+
+### Configurando e inicializando a aplicação back-end
+
+Acessar a pasta `tech-start-pro-erp`.
+
+```bash
+cd tech-start-pro-erp
+```
+
+Baixar dependências do maven.
+
+```bash
+mvn install
+```
+
+Fazer o deploy projeto pelo maven, existe duas formas para fazer, sendo pelo maven ou manual.
+
+1) Maven
+
+Executar servidor wildfly.
+
+```bash
+./bin/standalone.sh
+```
+
+Na pasta erp, executar comando para que o maven efetue o deploy no wildfly.
+
+```bash
+mvn wildfly:deploy
+```
+
+2) Manual
+
+Copiar arquivo `.war` gerado pelo maven na pasta `./target/tech-start-pro.war` para a pasta de deploy do wildfly `./standalone/deployments/`
+
+Executar servidor wildfly.
+
+```bash
+./bin/standalone.sh
+```
+
+### Configurando e inicializando a aplicação front-end
+
+Acessar a pasta `tech-start-pro-erp`.
+
+```bash
+cd tech-start-pro-vue
+```
+
+Instalar dependências do npm usando yarn
+
+```bash
+yarn
+```
+
+Inicializar servidor
+
+```bash
+yarn serve
+```
+
+### Acessar aplicação
+
+Acessar no navegador usando a URL
+
+http://localhost:8081/
+
 # Ambiente
 
 - Sistema Operacional: Manjaro Linux (Arch) Kernel 5.9.3-1
