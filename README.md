@@ -46,6 +46,14 @@ create user tech encrypted password 't789';
 grant all privileges on database tech_start_pro to tech;
 ```
 
+### Importando base
+
+Dentro da pasta `sql` em `tec-start-pro-erp` executar o sql `base.sql`
+
+```bash
+psql -h localhost -U tech tech_start_prop < base.sql
+```
+
 ### Configurando e inicializando a aplicação back-end
 
 Acessar a pasta `tech-start-pro-erp`.
