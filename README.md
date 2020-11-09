@@ -29,8 +29,8 @@ Sendo a aplicação consistuida de:
 - Wildfly (21.0.0.Final)
 - Maven (3.6.3)
 - Postgresql (12.4)
-- Node (12.10.0)
-- Yarn (1.22.5)
+- Node (15.1.0)
+- Yarn (1.22.10)
 
 ## Instalação
 
@@ -127,7 +127,7 @@ http://localhost:8081/
 - Memória: 20GB 2133Mhz
 - SSD: Samsung SSD 850 EVO 250GB
 - Java: OpenJDK 1.8.0_265
-- Node: v12.10.0
-- Yarn: 1.22.5
+- Node: v15.1.0
+- Yarn: 1.22.10
 - Maven: Apache Maven 3.6.3
 - Postgresql: 12.4
